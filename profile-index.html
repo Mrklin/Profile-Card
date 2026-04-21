@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Card</title>
+  <link rel="stylesheet" href="profile-styles.css">
+</head>
+<body>
+  <article data-testid="test-profile-card" class="profile-card" role="article">
+    <figure class="avatar-section">
+      <img 
+        data-testid="test-user-avatar" 
+        src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=300&h=300&fit=crop&crop=face" 
+        alt="Profile photo of John Doe, software developer" 
+        loading="lazy"
+      >
+      <figcaption>John Doe</figcaption>
+    </figure>
+
+    <header>
+      <h1 data-testid="test-user-name">John Doe</h1>
+    </header>
+
+    <p data-testid="test-user-bio">
+      Passionate software developer specializing in accessible web applications. Advocate for semantic HTML, WCAG compliance, and testable components. Building modern UIs with vanilla tech.
+    </p>
+
+    <div class="time-section">
+      <span data-testid="test-user-time" aria-live="polite">Loading...</span>
+    </div>
+
+    <nav aria-label="Social links">
+      <ul data-testid="test-user-social-links" role="list" class="social-links">
+        <li><a href="https://twitter.com/johndoe" data-testid="test-user-social-twitter" target="_blank" rel="noopener noreferrer" aria-label="Twitter">Twitter</a></li>
+        <li><a href="https://github.com/johndoe" data-testid="test-user-social-github" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a></li>
+        <li><a href="https://linkedin.com/in/johndoe" data-testid="test-user-social-linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a></li>
+      </ul>
+    </nav>
+
+    <section aria-labelledby="hobbies-heading">
+      <h2 id="hobbies-heading">Hobbies</h2>
+      <ul data-testid="test-user-hobbies" role="list">
+        <li>Building accessible components</li>
+        <li>Automated testing</li>
+        <li>Keyboard-first navigation</li>
+        <li>CSS Grid experiments</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="dislikes-heading">
+      <h2 id="dislikes-heading">Dislikes</h2>
+      <ul data-testid="test-user-dislikes" role="list">
+        <li>Non-semantic div soup</li>
+        <li>Missing alt text</li>
+        <li>Keyboard traps</li>
+        <li>Hard-coded responsive breakpoints</li>
+      </ul>
+    </section>
+  </article>
+
+  <script src="profile-script.js"></script>
+</body>
+</html>
+
